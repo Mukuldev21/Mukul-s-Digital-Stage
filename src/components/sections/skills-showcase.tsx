@@ -58,20 +58,20 @@ export function SkillsShowcase() {
           </CardTitle>
           <CardDescription>A comprehensive list of my technical proficiencies.</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-8"> {/* Increased space between categories */}
+        <CardContent className="space-y-8"> 
           {skillCategories.map((category) => (
             <div key={category.name}>
-              <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center"> {/* Increased font size and margin */}
-                <category.icon className="mr-3 h-6 w-6 text-accent" /> {/* Slightly larger icon */}
+              <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center"> 
+                <category.icon className="mr-3 h-6 w-6 text-accent" /> 
                 {category.name}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <div
                     key={skill}
-                    className="px-4 py-2.5 rounded-lg shadow-md border border-border bg-background/80 hover:bg-accent hover:text-accent-foreground transition-all duration-200 cursor-default transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" // Enhanced styling
+                    className="px-4 py-2.5 rounded-lg shadow-md border border-border bg-background/80 hover:bg-accent hover:text-accent-foreground transition-all duration-200 cursor-default transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
                   >
-                    <span className="text-sm font-medium text-foreground group-hover:text-accent-foreground"> {/* Ensure text color changes on hover via group */}
+                    <span className="text-sm font-medium text-foreground group-hover:text-accent-foreground"> 
                       {skill}
                     </span>
                   </div>
