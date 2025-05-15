@@ -21,7 +21,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "CURA Healthcare Services Solutions",
-    description: "Built a Selenium-based framework with parallel execution, reducing test runtime by 40%. Enabled headless mode and cross-browser testing (Chrome, Firefox, Edge) for 100% compatibility. Integrated Extent Reports with detailed logs, cutting debugging time by 50%. Used JSON-based data management, improving scalability and maintainability by 60%.",
+    description: "Developed a Selenium framework with parallel execution (40% faster tests), cross-browser support, Extent Reports (50% less debug time), and JSON data management for improved scalability.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "healthcare automation",
     codeLink: "https://github.com/mukuldm/cura-healthcare-selenium", 
@@ -30,9 +30,9 @@ const projects: Project[] = [
   },
   {
     name: "SauceDemo Playwright TS Solution",
-    description: "Developed a scalable end-to-end test automation framework using Playwright with TypeScript, achieving a 70% reduction in test execution time through parallel testing. Implemented the Page Object Model (POM) design pattern, enhancing code maintainability and reducing duplication by 60%. Integrated HTML reporting and trace viewer for comprehensive test result analysis, decreasing debugging time by 50%. Utilized JSON-based fixtures for dynamic test data management, improving test scalability and reusability. Configured the framework for cross-browser testing (Chrome, Edge, Webkit), ensuring 100% compatibility across major browsers.",
+    description: "Created a Playwright/TypeScript E2E framework reducing test time by 70% via parallel tests. Used POM for 60% better maintainability, integrated HTML reports (50% less debug time), and JSON fixtures for cross-browser compatibility.",
     imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "e-commerce testing",
+    dataAiHint: "ecommerce testing",
     codeLink: "https://github.com/mukuldm/saucedemo-playwright-ts",
     technologies: ["Playwright", "TypeScript", "HTML Reporter", "JSON", "Git"],
     icon: Bot,
@@ -55,7 +55,7 @@ export function ProjectPortfolio() {
         {projects.map((project, index) => (
           <Card 
             key={index} 
-            className="group flex flex-col overflow-hidden rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform"
+            className="group flex flex-col overflow-hidden rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform hover:-translate-y-1"
           >
             {project.imageUrl && (
               <div className="relative h-48 w-full overflow-hidden rounded-t-xl"> {/* Ensure image respects rounded corners */}
