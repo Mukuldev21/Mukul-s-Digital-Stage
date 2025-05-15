@@ -21,7 +21,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "CURA Healthcare Services Solutions",
-    description: "Built a Selenium framework reducing test runtime by 40% with parallel execution, cross-browser support, Extent Reports, and JSON data management for scalability.",
+    description: "Selenium framework with parallel execution reducing test runtime by 40%. Features cross-browser support, Extent Reports, and JSON data management for scalability.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "healthcare automation",
     codeLink: "https://github.com/mukuldm/cura-healthcare-selenium",
@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     name: "SauceDemo Playwright TS Solution",
-    description: "Developed a Playwright/TypeScript E2E framework cutting test time by 70% with parallel tests, POM for 60% better maintainability, HTML reports, and JSON fixtures.",
+    description: "Playwright/TypeScript E2E framework cutting test time by 70% with parallel tests. Implements POM for 60% better maintainability, HTML reports, and JSON fixtures.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "ecommerce testing",
     codeLink: "https://github.com/mukuldm/saucedemo-playwright-ts",
