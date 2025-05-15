@@ -95,7 +95,7 @@ body {
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px); /* Increased translateY for a more noticeable effect */
     }
     to {
       opacity: 1;
@@ -105,8 +105,12 @@ body {
 
   section {
     @apply py-12 sm:py-16 lg:py-20;
-    animation: fadeIn 0.7s ease-out forwards;
-    animation-delay: 0.2s; /* Optional: adds a slight delay before animation starts */
+    /* Ensure animation properties are correctly applied */
+    animation-name: fadeIn;
+    animation-duration: 0.8s; /* Slightly longer duration */
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* Keep the state of the last keyframe */
+    animation-delay: 0.1s; /* Slight delay for staggering if needed, or remove if not desired */
     opacity: 0; /* Start hidden before animation */
   }
 }

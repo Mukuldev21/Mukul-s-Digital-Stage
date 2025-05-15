@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Cog, Network, GitMerge, Cloud, Users, Repeat, Zap, TestTubeDiagonal, ShieldCheck, Smartphone, Code, Terminal, Package, Cpu, Server, Briefcase } from "lucide-react";
+import { Zap, TestTubeDiagonal, Network, Smartphone, GitMerge, Cloud, Code, Briefcase } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface SkillCategory {
@@ -49,8 +48,8 @@ const skillCategories: SkillCategory[] = [
 
 export function SkillsShowcase() {
   return (
-    <section id="skills" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
-      <Card className="shadow-lg transition-shadow hover:shadow-xl  bg-card/90 dark:bg-card/80 backdrop-blur-md">
+    <section id="skills" className="w-full pt-8">
+      <Card className="shadow-lg transition-shadow hover:shadow-xl bg-card/90 dark:bg-card/80 backdrop-blur-md">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-primary flex items-center">
             <Zap className="mr-3 h-7 w-7" />
@@ -65,15 +64,16 @@ export function SkillsShowcase() {
                 <category.icon className="mr-2 h-5 w-5 text-accent" />
                 {category.name}
               </h3>
-              <div className="flex flex-wrap gap-3"> {/* Increased gap slightly */}
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
-                  <Badge
+                  <div
                     key={skill}
-                    variant="secondary"
-                    className="px-3 py-1.5 text-sm font-medium rounded-md shadow-sm border-primary/30 bg-primary/10 text-primary hover:bg-primary/15 hover:shadow-md transition-all duration-200 cursor-default transform hover:scale-[1.02]"
+                    className="px-4 py-2 rounded-md shadow-sm border border-border bg-background/70 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default transform hover:scale-[1.03]"
                   >
-                    {skill}
-                  </Badge>
+                    <span className="text-sm font-medium text-foreground group-hover:text-accent-foreground">
+                      {skill}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
