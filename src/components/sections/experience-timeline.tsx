@@ -1,4 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase, CalendarDays, CheckCircle, Building } from "lucide-react";
 
 interface Experience {
@@ -35,8 +36,8 @@ const experiences: Experience[] = [
 
 export function ExperienceTimeline() {
   return (
-    <section id="experience" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
-      <Card className="shadow-lg transition-shadow hover:shadow-xl bg-card/90 dark:bg-card/80 backdrop-blur-md">
+    <section id="experience" className="w-full pt-8 pb-8 md:pb-12">
+      <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-shadow hover:shadow-xl">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-primary flex items-center">
             <Briefcase className="mr-3 h-7 w-7" />
@@ -57,7 +58,7 @@ export function ExperienceTimeline() {
                   <img 
                     src={exp.logoUrl} 
                     alt={`${exp.company} logo`} 
-                    className="w-12 h-12 rounded-full mr-4 mb-2 sm:mb-0 object-contain border bg-background p-1"
+                    className="w-12 h-12 rounded-full mr-4 mb-2 sm:mb-0 object-contain border bg-background/30 p-1" // Adjusted background for visibility on glass
                     data-ai-hint={exp.dataAiHint || "company logo"}
                   />
                 )}

@@ -1,5 +1,5 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Zap, TestTubeDiagonal, Network, Smartphone, GitMerge, Cloud, Code, Briefcase, CheckCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -49,8 +49,8 @@ const skillCategories: SkillCategory[] = [
 
 export function SkillsShowcase() {
   return (
-    <section id="skills" className="w-full pt-8">
-      <div className="mb-12 text-center"> {/* Increased bottom margin for better spacing */}
+    <section id="skills" className="w-full pt-8 pb-8 md:pb-12">
+      <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl flex items-center justify-center">
           <Zap className="mr-3 h-8 w-8" />
           Skills & Technologies
@@ -60,11 +60,11 @@ export function SkillsShowcase() {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Increased gap */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skillCategories.map((category) => (
           <Card 
             key={category.name} 
-            className="shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform bg-card/90 dark:bg-card/80 backdrop-blur-md flex flex-col"
+            className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform flex flex-col"
           >
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-primary flex items-center">
@@ -72,12 +72,12 @@ export function SkillsShowcase() {
                 {category.name}
               </CardTitle>
             </CardHeader>
-            <CardContent className="flex-grow pt-2"> {/* Adjusted padding top */}
-              <ul className="space-y-2.5"> {/* Increased spacing between list items */}
+            <CardContent className="flex-grow pt-2">
+              <ul className="space-y-3"> {/* Increased spacing */}
                 {category.skills.map((skill) => (
-                  <li key={skill} className="flex items-center text-foreground/90">
-                    <CheckCircle className="mr-2.5 h-4 w-4 text-accent flex-shrink-0" /> {/* Slightly larger margin */}
-                    <span className="text-sm">{skill}</span> {/* Ensure consistent text size */}
+                  <li key={skill} className="flex items-center text-foreground/90 p-2 rounded-md hover:bg-primary/10 transition-colors">
+                    <CheckCircle className="mr-2.5 h-5 w-5 text-accent flex-shrink-0" /> {/* Slightly larger icon & margin */}
+                    <span className="font-medium">{skill}</span>
                   </li>
                 ))}
               </ul>

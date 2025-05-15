@@ -1,4 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, Award, CalendarDays, CheckCircle, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -40,10 +41,10 @@ const certifications: CertificationItem[] = [
 
 export function EducationCertifications() {
   return (
-    <section id="education-certifications" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
+    <section id="education-certifications" className="w-full pt-8 pb-8 md:pb-12">
       <div className="grid gap-8 md:grid-cols-2">
         {/* Education Card */}
-        <Card className="shadow-lg transition-shadow hover:shadow-xl bg-card/90 dark:bg-card/80 backdrop-blur-md">
+        <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-shadow hover:shadow-xl">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-primary flex items-center">
               <GraduationCap className="mr-3 h-7 w-7" />
@@ -62,7 +63,7 @@ export function EducationCertifications() {
         </Card>
 
         {/* Certifications & Achievements Card */}
-        <Card className="shadow-lg transition-shadow hover:shadow-xl bg-card/90 dark:bg-card/80 backdrop-blur-md">
+        <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-shadow hover:shadow-xl">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-primary flex items-center">
               <Award className="mr-3 h-7 w-7" />

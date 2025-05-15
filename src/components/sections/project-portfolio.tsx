@@ -1,7 +1,8 @@
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Lightbulb, Code2, TestTubeDiagonal, Bot } from "lucide-react";
+import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal } from "lucide-react"; // Updated icon import order
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
@@ -40,8 +41,8 @@ const projects: Project[] = [
 
 export function ProjectPortfolio() {
   return (
-    <section id="projects" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
-      <div className="mb-8 text-center">
+    <section id="projects" className="w-full pt-8 pb-8 md:pb-12">
+      <div className="mb-12 text-center"> {/* Increased bottom margin */}
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl flex items-center justify-center">
           <Lightbulb className="mr-3 h-8 w-8" />
           Project Portfolio
@@ -50,20 +51,20 @@ export function ProjectPortfolio() {
           A selection of my key projects.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2"> {/* Increased gap */}
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
         {projects.map((project, index) => (
           <Card 
             key={index} 
-            className="group flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.05] transform bg-card/90 dark:bg-card/80 backdrop-blur-md" // Enhanced scale
+            className="group flex flex-col overflow-hidden rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform"
           >
             {project.imageUrl && (
-              <div className="relative h-48 w-full overflow-hidden"> {/* Ensure image does not overflow card on scale */}
+              <div className="relative h-48 w-full overflow-hidden rounded-t-xl"> {/* Ensure image respects rounded corners */}
                 <Image
                   src={project.imageUrl}
                   alt={project.name}
                   layout="fill"
                   objectFit="cover"
-                  className="transition-transform duration-300 group-hover:scale-110" // Zoom image on card hover
+                  className="transition-transform duration-300 group-hover:scale-110"
                   data-ai-hint={project.dataAiHint || "project image"}
                 />
               </div>
@@ -78,13 +79,13 @@ export function ProjectPortfolio() {
               <CardDescription className="text-foreground/80">{project.description}</CardDescription>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="text-xs bg-primary/10 text-primary border-primary/30">
+                  <Badge key={tech} variant="secondary" className="text-xs bg-primary/10 text-primary border-primary/30 hover:bg-primary/20">
                     {tech}
                   </Badge>
                 ))}
               </div>
             </CardContent>
-            <CardFooter className="flex justify-start gap-3 border-t pt-4">
+            <CardFooter className="flex justify-start gap-3 border-t pt-4 border-border/50"> {/* Added border transparency */}
               {project.codeLink && (
                 <Button variant="outline" size="sm" asChild className="transition-transform hover:scale-105">
                   <Link href={project.codeLink} target="_blank" rel="noopener noreferrer">
