@@ -5,7 +5,7 @@ export function PassionGoal() {
   const passionGoalText = "Dedicated to continuous learning and innovation in test automation, DevOps, and cloud-based solutions. Focused on scaling frameworks and optimizing strategies for high-quality software delivery.";
 
   return (
-    <section id="passion-goal" className="w-full">
+    <section id="passion-goal" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
       <Card className="shadow-lg transition-shadow hover:shadow-xl bg-card/90 dark:bg-card/80 backdrop-blur-md">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-primary flex items-center">

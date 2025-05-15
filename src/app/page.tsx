@@ -13,20 +13,20 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
+        {/* ProfileSummary is rendered first and has its own top padding */}
+        <ProfileSummary /> 
         <div className="container mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="space-y-12 sm:space-y-16 lg:space-y-20">
-            <ProfileSummary />
-            <Separator className="my-8" />
-            <SkillsShowcase />
-            <Separator className="my-8" />
-            <ExperienceTimeline />
-            <Separator className="my-8" />
-            <ProjectPortfolio />
-            <Separator className="my-8" />
-            <EducationCertifications />
-            <Separator className="my-8" />
-            <PassionGoal />
-          </div>
+          {/* Sections below ProfileSummary will use container padding */}
+          <Separator className="my-8" />
+          <SkillsShowcase />
+          <Separator className="my-8" />
+          <ExperienceTimeline />
+          <Separator className="my-8" />
+          <ProjectPortfolio />
+          <Separator className="my-8" />
+          <EducationCertifications />
+          <Separator className="my-8" />
+          <PassionGoal />
         </div>
       </main>
       <Footer />

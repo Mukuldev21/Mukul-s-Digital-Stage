@@ -23,7 +23,7 @@ const projects: Project[] = [
     description: "Built a Selenium-based framework with parallel execution, reducing test runtime by 40%. Enabled headless mode and cross-browser testing (Chrome, Firefox, Edge) for 100% compatibility. Integrated Extent Reports with detailed logs, cutting debugging time by 50%. Used JSON-based data management, improving scalability and maintainability by 60%.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "healthcare automation",
-    codeLink: "https://github.com/mukuldm/cura-healthcare-selenium", // Replace with actual link
+    codeLink: "https://github.com/mukuldm/cura-healthcare-selenium", 
     technologies: ["Java 21", "Selenium WebDriver", "TestNG", "Maven", "JSON", "Extent Reports", "Git"],
     icon: TestTubeDiagonal,
   },
@@ -32,7 +32,7 @@ const projects: Project[] = [
     description: "Developed a scalable end-to-end test automation framework using Playwright with TypeScript, achieving a 70% reduction in test execution time through parallel testing. Implemented the Page Object Model (POM) design pattern, enhancing code maintainability and reducing duplication by 60%. Integrated HTML reporting and trace viewer for comprehensive test result analysis, decreasing debugging time by 50%. Utilized JSON-based fixtures for dynamic test data management, improving test scalability and reusability. Configured the framework for cross-browser testing (Chrome, Edge, Webkit), ensuring 100% compatibility across major browsers.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "e-commerce testing",
-    codeLink: "https://github.com/mukuldm/saucedemo-playwright-ts", // Replace with actual link
+    codeLink: "https://github.com/mukuldm/saucedemo-playwright-ts",
     technologies: ["Playwright", "TypeScript", "HTML Reporter", "JSON", "Git"],
     icon: Bot,
   },
@@ -40,7 +40,7 @@ const projects: Project[] = [
 
 export function ProjectPortfolio() {
   return (
-    <section id="projects" className="w-full">
+    <section id="projects" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
       <div className="mb-8 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl flex items-center justify-center">
           <Lightbulb className="mr-3 h-8 w-8" />
@@ -50,19 +50,20 @@ export function ProjectPortfolio() {
           A selection of my key projects.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2"> {/* Adjusted to lg:grid-cols-2 for two projects */}
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2"> {/* Increased gap */}
         {projects.map((project, index) => (
           <Card 
             key={index} 
-            className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform bg-card/90 dark:bg-card/80 backdrop-blur-md"
+            className="group flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.05] transform bg-card/90 dark:bg-card/80 backdrop-blur-md" // Enhanced scale
           >
             {project.imageUrl && (
-              <div className="relative h-48 w-full">
+              <div className="relative h-48 w-full overflow-hidden"> {/* Ensure image does not overflow card on scale */}
                 <Image
                   src={project.imageUrl}
                   alt={project.name}
                   layout="fill"
                   objectFit="cover"
+                  className="transition-transform duration-300 group-hover:scale-110" // Zoom image on card hover
                   data-ai-hint={project.dataAiHint || "project image"}
                 />
               </div>

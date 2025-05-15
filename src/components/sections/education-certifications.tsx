@@ -1,5 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, Award, CalendarDays, CheckCircle, Star } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
 
 interface EducationItem {
   degree: string;
@@ -28,7 +30,7 @@ const certifications: CertificationItem[] = [
   { 
     name: "GEM Award Winner – Recognized for E2E Certificates (WTW)", 
     issuer: "Capgemini", 
-    date: "Oct 2024", // Assuming this date format is okay, adjusted from (Oct,2024)
+    date: "Oct 2024",
     icon: Award 
   },
   { name: "QAT - Grade A", issuer: "Capgemini", icon: Star },
@@ -38,7 +40,7 @@ const certifications: CertificationItem[] = [
 
 export function EducationCertifications() {
   return (
-    <section id="education-certifications" className="w-full">
+    <section id="education-certifications" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
       <div className="grid gap-8 md:grid-cols-2">
         {/* Education Card */}
         <Card className="shadow-lg transition-shadow hover:shadow-xl bg-card/90 dark:bg-card/80 backdrop-blur-md">
