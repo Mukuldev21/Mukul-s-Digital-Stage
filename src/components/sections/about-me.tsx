@@ -35,7 +35,7 @@ export function AboutMe() {
               <UserCircle className="mr-3 h-8 w-8" />
               About Me
             </h2>
-            <p className="mt-2 text-lg text-muted-foreground">My Introduction</p>
+            {/* <p className="mt-2 text-lg text-muted-foreground">My Introduction</p> */}
           </div>
 
           <div className="space-y-8"> {/* Changed from grid to space-y for single column */}
