@@ -10,13 +10,11 @@ import { Separator } from "@/components/ui/separator";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1">
-        {/* ProfileSummary is rendered first and has its own top padding */}
         <ProfileSummary /> 
         <div className="container mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
-          {/* Sections below ProfileSummary will use container padding */}
           <Separator className="my-8" />
           <SkillsShowcase />
           <Separator className="my-8" />

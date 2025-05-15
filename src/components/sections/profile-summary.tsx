@@ -1,9 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Mail, MapPin, Briefcase, Linkedin, Github, FileText, Zap, Phone } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, FileText, Briefcase, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 
 export function ProfileSummary() {
   const name = "Mukul Dev Mahato";
@@ -11,89 +9,79 @@ export function ProfileSummary() {
   const phone = "+91 7033380645";
   const location = "Pune, Maharashtra, India";
   const professionalTitle = "Software Development Engineer in Test (SDET)";
-  const summary = "Software Development Engineer in Test (SDET) with 3 years of experience in building scalable test automation frameworks, integrating tests into CI/CD pipelines, and enhancing software reliability through DevOps practices. Skilled in test automation, API testing, cloud technologies, and Agile methodologies.";
-  const keySkills = ["Test Automation", "CI/CD", "API Testing", "Cloud", "Agile", "DevOps"];
+  const summary = "Experienced SDET with 3 years in building scalable test automation frameworks, CI/CD integration, and enhancing software reliability via DevOps. Proficient in API testing, cloud tech, and Agile.";
   const linkedinUrl = "https://www.linkedin.com/in/mukulmahato/"; 
   const githubUrl = "https://github.com/mukuldm";
   const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; // Ensure this PDF exists in your public folder
 
   return (
-    <section id="profile" className="w-full pt-8"> {/* Added pt-8 for spacing from sticky header */}
-      <Card className="overflow-hidden shadow-xl transition-shadow hover:shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-xl border border-border/40 dark:border-border/30 rounded-2xl">
-        <CardHeader className="p-6 sm:p-8">
-          <div className="flex flex-col items-center gap-6 sm:flex-row">
-            <Avatar className="h-40 w-40 sm:h-48 sm:w-48 border-4 border-primary shadow-lg">
-              <AvatarImage src={`https://placehold.co/250x250.png`} alt={name} data-ai-hint="professional portrait" />
+    <section id="profile" className="w-full py-20 md:py-28 lg:py-36 bg-gradient-to-br from-background to-muted/30 dark:to-muted/10">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-center">
+          <div className="flex justify-center md:order-last">
+            <Avatar className="h-60 w-60 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96 border-4 border-primary/50 shadow-2xl transition-transform hover:scale-105">
+              <AvatarImage src="https://placehold.co/400x400.png" alt={name} data-ai-hint="professional portrait" />
               <AvatarFallback>{name.substring(0, 2).toUpperCase()}</AvatarFallback>
             </Avatar>
-            <div className="text-center sm:text-left">
-              <p className="text-xl text-muted-foreground sm:text-2xl">Hi, I'm</p>
-              <CardTitle className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-primary">
-                {name}
-              </CardTitle>
-              <p className="mt-1 text-lg text-muted-foreground sm:text-xl">
-                {professionalTitle}
-              </p>
-              <div className="mt-3 flex flex-wrap justify-center sm:justify-start gap-2">
-                {keySkills.map(skill => (
-                  <Badge key={skill} variant="secondary" className="text-xs sm:text-sm bg-primary/10 text-primary border-primary/30">
-                     {skill}
-                  </Badge>
-                ))}
+          </div>
+          <div className="space-y-5 text-center md:text-left">
+            <span className="text-lg font-medium text-primary tracking-wide">Hello, I'm</span>
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary/60 py-1">
+              {name}
+            </h1>
+            <p className="text-2xl font-semibold text-foreground md:text-3xl">
+              A Creative <span className="text-primary">{professionalTitle}</span>
+            </p>
+            <p className="max-w-xl text-muted-foreground mx-auto md:mx-0 text-base sm:text-lg">
+              {summary}
+            </p>
+            
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+               <Button size="lg" asChild className="transition-transform hover:scale-105 shadow-md">
+                  <a href={`mailto:${email}`}>
+                      <Send className="mr-2 h-5 w-5" /> Hire Me
+                  </a>
+               </Button>
+               <Button variant="outline" size="lg" asChild className="transition-transform hover:scale-105 shadow-md">
+                  <Link href={cvPath} target="_blank" download="Mukul_Dev_Mahato_CV.pdf">
+                      <FileText className="mr-2 h-5 w-5" /> Download CV
+                  </Link>
+               </Button>
+            </div>
+
+            <div className="mt-8 space-y-3 text-sm text-muted-foreground">
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Mail className="h-5 w-5 text-primary" />
+                <a href={`mailto:${email}`} className="hover:underline hover:text-primary transition-colors">
+                  {email}
+                </a>
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Phone className="h-5 w-5 text-primary" />
+                <a href={`tel:${phone}`} className="hover:underline hover:text-primary transition-colors">
+                  {phone}
+                </a>
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <MapPin className="h-5 w-5 text-primary" />
+                <span>{location}</span>
               </div>
             </div>
+             <div className="mt-6 flex justify-center md:justify-start space-x-4">
+                <Link href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+                        <Linkedin className="h-6 w-6" />
+                    </Button>
+                </Link>
+                <Link href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                     <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+                        <Github className="h-6 w-6" />
+                    </Button>
+                </Link>
+             </div>
           </div>
-        </CardHeader>
-        <CardContent className="p-6 sm:p-8 space-y-6">
-          <p className="text-base leading-relaxed text-foreground/90">
-            {summary}
-          </p>
-          <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-2 sm:gap-6">
-            <div className="flex items-center space-x-3">
-              <Mail className="h-5 w-5 text-primary" />
-              <a href={`mailto:${email}`} className="hover:underline text-foreground hover:text-primary">
-                {email}
-              </a>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Phone className="h-5 w-5 text-primary" />
-              <a href={`tel:${phone}`} className="hover:underline text-foreground hover:text-primary">
-                {phone}
-              </a>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="h-5 w-5 text-primary" />
-              <span className="text-foreground/90">{location}</span>
-            </div>
-             <div className="flex items-center space-x-3">
-              <Briefcase className="h-5 w-5 text-primary" />
-              <span className="text-foreground/90">Open to new opportunities</span>
-            </div>
-          </div>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
-             <Button asChild className="transition-transform hover:scale-105">
-                <Link href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
-                </Link>
-             </Button>
-             <Button variant="outline" asChild className="transition-transform hover:scale-105">
-                <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> GitHub
-                </Link>
-             </Button>
-             <Button variant="outline" asChild className="transition-transform hover:scale-105">
-                <Link href="#projects">
-                    <Zap className="mr-2 h-4 w-4" /> View Projects
-                </Link>
-             </Button>
-             <Button variant="outline" asChild className="transition-transform hover:scale-105">
-                <Link href={cvPath} target="_blank" download="Mukul_Dev_Mahato_CV.pdf">
-                    <FileText className="mr-2 h-4 w-4" /> Download CV
-                </Link>
-             </Button>
-          </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </section>
   );
 }

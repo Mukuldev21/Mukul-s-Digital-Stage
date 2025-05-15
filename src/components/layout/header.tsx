@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
-import { CodeXml, Home, User, Zap, Briefcase, FolderKanban, GraduationCap, Target } from "lucide-react"; // Added icons
+import { CodeXml, User, Zap, Briefcase, FolderKanban, GraduationCap, Target, HomeIcon, Lightbulb } from "lucide-react"; // Added HomeIcon, Lightbulb, adjusted others for consistency
 
 const navItems = [
+  { href: "/", label: "Home", icon: HomeIcon }, // Changed to HomeIcon for clarity
   { href: "/#profile", label: "Profile", icon: User },
   { href: "/#skills", label: "Skills", icon: Zap },
   { href: "/#experience", label: "Experience", icon: Briefcase },
-  { href: "/#projects", label: "Projects", icon: FolderKanban },
+  { href: "/#projects", label: "Projects", icon: FolderKanban }, // Changed icon from Lightbulb
   { href: "/#education-certifications", label: "Education", icon: GraduationCap },
   { href: "/#passion-goal", label: "Passion", icon: Target },
 ];
@@ -26,9 +27,9 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+              className="group inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
             >
-              <item.icon className="mr-1.5 inline h-4 w-4" />
+              <item.icon className="mr-1.5 h-4 w-4 transition-transform group-hover:scale-110" />
               {item.label}
             </Link>
           ))}
