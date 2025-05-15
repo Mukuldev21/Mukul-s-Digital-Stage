@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
-import { CodeXml, User, Zap, Briefcase, FolderKanban, GraduationCap, Target, HomeIcon, Lightbulb } from "lucide-react"; // Added HomeIcon, Lightbulb, adjusted others for consistency
+import { CodeXml, User, Zap, Briefcase, FolderKanban, GraduationCap, Info, HomeIcon } from "lucide-react";
 
 const navItems = [
-  { href: "/", label: "Home", icon: HomeIcon }, // Changed to HomeIcon for clarity
+  { href: "/", label: "Home", icon: HomeIcon },
   { href: "/#profile", label: "Profile", icon: User },
+  { href: "/#about-me", label: "About", icon: Info },
   { href: "/#skills", label: "Skills", icon: Zap },
   { href: "/#experience", label: "Experience", icon: Briefcase },
-  { href: "/#projects", label: "Projects", icon: FolderKanban }, // Changed icon from Lightbulb
+  { href: "/#projects", label: "Projects", icon: FolderKanban },
   { href: "/#education-certifications", label: "Education", icon: GraduationCap },
-  { href: "/#passion-goal", label: "Passion", icon: Target },
 ];
 
 export function Header() {
