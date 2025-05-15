@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -36,20 +35,8 @@ export function AboutMe() {
           <p className="mt-2 text-lg text-muted-foreground">My Introduction</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:mx-0 rounded-xl overflow-hidden shadow-2xl group transition-all duration-300 hover:scale-105">
-            <Image
-              src="https://placehold.co/400x500.png"
-              alt="About Mukul Dev Mahato"
-              layout="fill"
-              objectFit="cover"
-              className="transition-transform duration-500 group-hover:scale-110"
-              data-ai-hint="professional tech"
-            />
-             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-          </div>
-
-          <div className="space-y-6">
+        <div className="max-w-3xl mx-auto space-y-10">
+          <div className="space-y-6 text-left">
             <p className="text-lg leading-relaxed text-foreground/90">
               I'm an experienced Software Development Engineer in Test (SDET) with 3 years of hands-on experience in building scalable test automation frameworks, integrating tests into CI/CD pipelines, and enhancing software reliability through DevOps practices.
             </p>
@@ -59,14 +46,16 @@ export function AboutMe() {
             <p className="text-lg leading-relaxed text-foreground/90">
               Currently working at Capgemini in Pune, Maharashtra, I focus on scaling test automation frameworks and optimizing testing strategies for high-quality software delivery.
             </p>
+          </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
-              <InfoCard icon={Briefcase} value="03+" label="Years Experience" />
-              <InfoCard icon={FolderKanban} value="05+" label="Projects Completed" />
-              <InfoCard icon={Building} value="01" label="Company Worked" />
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <InfoCard icon={Briefcase} value="03+" label="Years Experience" />
+            <InfoCard icon={FolderKanban} value="05+" label="Projects Completed" />
+            <InfoCard icon={Building} value="01" label="Company Worked" />
+          </div>
 
-            <Button size="lg" asChild className="mt-8 transition-transform hover:scale-105 shadow-md w-full sm:w-auto">
+          <div className="text-center pt-4">
+            <Button size="lg" asChild className="transition-transform hover:scale-105 shadow-md">
               <Link href={cvPath} target="_blank" download="Mukul_Dev_Mahato_CV.pdf">
                 <Download className="mr-2 h-5 w-5" />
                 Download CV

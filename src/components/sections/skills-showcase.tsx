@@ -65,12 +65,12 @@ export function SkillsShowcase() {
                 <category.icon className="mr-2 h-5 w-5 text-accent" />
                 {category.name}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3"> {/* Increased gap slightly */}
                 {category.skills.map((skill) => (
                   <Badge
                     key={skill}
                     variant="secondary"
-                    className="px-3 py-1 text-sm rounded-md shadow-sm border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all duration-200 cursor-default"
+                    className="px-3 py-1.5 text-sm font-medium rounded-md shadow-sm border-primary/30 bg-primary/10 text-primary hover:bg-primary/15 hover:shadow-md transition-all duration-200 cursor-default transform hover:scale-[1.02]"
                   >
                     {skill}
                   </Badge>
