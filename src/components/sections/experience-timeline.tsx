@@ -21,15 +21,11 @@ const experiences: Experience[] = [
     logoUrl: "https://placehold.co/100x100.png", 
     dataAiHint: "company logo",
     achievements: [
-      "Designed scalable test automation frameworks achieving 80%+ test coverage.",
-      "Automated 95% of regression testing, reducing manual effort and boosting efficiency.",
-      "Built Java-based automation for webApp and API.",
-      "Integrated tests into CI/CD pipelines (Jenkins, Azure DevOps), cutting deployment validation time by 30%.",
-      "Developed REST API automation for 500+ backend services, ensuring stability and security.",
-      "Improved flaky test reliability by 40% through enhanced automation practices.",
-      "Applied system design principles to create secure, scalable, and maintainable frameworks.",
-      "Executed Agile-aligned test strategies, managing defects and execution via JIRA and Azure DevOps, reducing post-release defects by 30%.",
-      "Contributed to sprint planning, test execution, and process refinement in Agile teams."
+      "Designed and implemented scalable test automation frameworks with 80%+ test coverage.",
+      "Automated 95% of regression testing, significantly reducing manual efforts.",
+      "Developed REST API automation suites for 500+ backend services.",
+      "Integrated automated tests into CI/CD pipelines, reducing deployment validation time by 30%.",
+      "Enhanced flaky test reliability by 40% through improved automation practices."
     ],
   },
 ];
