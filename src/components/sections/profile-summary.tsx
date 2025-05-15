@@ -13,10 +13,10 @@ export function ProfileSummary() {
 
   return (
     <section id="profile" className="w-full">
-      <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
-        <CardHeader className="bg-muted/30 p-6 sm:p-8">
+      <Card className="overflow-hidden shadow-xl transition-shadow hover:shadow-2xl bg-card/80 dark:bg-card/75 backdrop-blur-lg border border-border/40 dark:border-border/30 rounded-2xl">
+        <CardHeader className="p-6 sm:p-8">
           <div className="flex flex-col items-center gap-6 sm:flex-row">
-            <Avatar className="h-24 w-24 sm:h-32 sm:w-32 border-4 border-primary shadow-md">
+            <Avatar className="h-32 w-32 sm:h-40 sm:w-40 border-4 border-primary shadow-lg">
               <AvatarImage src={`https://placehold.co/200x200.png`} alt={name} data-ai-hint="professional portrait" />
               <AvatarFallback>{name.substring(0, 2).toUpperCase()}</AvatarFallback>
             </Avatar>
