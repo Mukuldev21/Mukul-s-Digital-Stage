@@ -1,3 +1,29 @@
-export default function Home() {
-  return <></>;
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { ProfileSummary } from "@/components/sections/profile-summary";
+import { SkillsShowcase } from "@/components/sections/skills-showcase";
+import { ExperienceTimeline } from "@/components/sections/experience-timeline";
+import { ProjectPortfolio } from "@/components/sections/project-portfolio";
+import { Separator } from "@/components/ui/separator";
+
+export default function HomePage() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        <div className="container mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+          <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+            <ProfileSummary />
+            <Separator className="my-8" />
+            <SkillsShowcase />
+            <Separator className="my-8" />
+            <ExperienceTimeline />
+            <Separator className="my-8" />
+            <ProjectPortfolio />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
 }
