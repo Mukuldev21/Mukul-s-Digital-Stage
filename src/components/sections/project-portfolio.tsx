@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal } from "lucide-react"; // Updated icon import order
+import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
@@ -21,16 +21,16 @@ interface Project {
 const projects: Project[] = [
   {
     name: "CURA Healthcare Services Solutions",
-    description: "Developed a Selenium framework with parallel execution (40% faster tests), cross-browser support, Extent Reports (50% less debug time), and JSON data management for improved scalability.",
+    description: "Built a Selenium framework reducing test runtime by 40% with parallel execution, cross-browser support, Extent Reports, and JSON data management for scalability.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "healthcare automation",
-    codeLink: "https://github.com/mukuldm/cura-healthcare-selenium", 
+    codeLink: "https://github.com/mukuldm/cura-healthcare-selenium",
     technologies: ["Java 21", "Selenium WebDriver", "TestNG", "Maven", "JSON", "Extent Reports", "Git"],
     icon: TestTubeDiagonal,
   },
   {
     name: "SauceDemo Playwright TS Solution",
-    description: "Created a Playwright/TypeScript E2E framework reducing test time by 70% via parallel tests. Used POM for 60% better maintainability, integrated HTML reports (50% less debug time), and JSON fixtures for cross-browser compatibility.",
+    description: "Developed a Playwright/TypeScript E2E framework cutting test time by 70% with parallel tests, POM for 60% better maintainability, HTML reports, and JSON fixtures.",
     imageUrl: "https://placehold.co/600x400.png",
     dataAiHint: "ecommerce testing",
     codeLink: "https://github.com/mukuldm/saucedemo-playwright-ts",
@@ -42,7 +42,7 @@ const projects: Project[] = [
 export function ProjectPortfolio() {
   return (
     <section id="projects" className="w-full pt-8 pb-8 md:pb-12">
-      <div className="mb-12 text-center"> {/* Increased bottom margin */}
+      <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl flex items-center justify-center">
           <Lightbulb className="mr-3 h-8 w-8" />
           Project Portfolio
@@ -53,18 +53,18 @@ export function ProjectPortfolio() {
       </div>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
         {projects.map((project, index) => (
-          <Card 
-            key={index} 
+          <Card
+            key={index}
             className="group flex flex-col overflow-hidden rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform hover:-translate-y-1"
           >
             {project.imageUrl && (
-              <div className="relative h-48 w-full overflow-hidden rounded-t-xl"> {/* Ensure image respects rounded corners */}
+              <div className="relative h-48 w-full overflow-hidden rounded-t-xl flex-shrink-0">
                 <Image
                   src={project.imageUrl}
                   alt={project.name}
                   layout="fill"
                   objectFit="cover"
-                  className="transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full transition-transform duration-300 group-hover:scale-110"
                   data-ai-hint={project.dataAiHint || "project image"}
                 />
               </div>
@@ -85,7 +85,7 @@ export function ProjectPortfolio() {
                 ))}
               </div>
             </CardContent>
-            <CardFooter className="flex justify-start gap-3 border-t pt-4 border-border/50"> {/* Added border transparency */}
+            <CardFooter className="flex justify-start gap-3 border-t pt-4 border-border/50">
               {project.codeLink && (
                 <Button variant="outline" size="sm" asChild className="transition-transform hover:scale-105">
                   <Link href={project.codeLink} target="_blank" rel="noopener noreferrer">
