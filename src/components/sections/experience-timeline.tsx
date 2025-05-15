@@ -18,7 +18,7 @@ const experiences: Experience[] = [
     company: "Capgemini",
     location: "Pune, Maharashtra",
     duration: "2022 – Present",
-    logoUrl: "https://placehold.co/100x100.png", 
+    logoUrl: "https://www.clipartmax.com/png/small/215-2153170_capgemini-capgemini-icon.png", 
     dataAiHint: "company logo",
     achievements: [
       "Designed scalable test automation frameworks achieving 80%+ test coverage.",

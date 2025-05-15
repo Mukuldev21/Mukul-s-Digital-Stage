@@ -21,7 +21,7 @@ export function ProfileSummary() {
         <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-center">
           <div className="flex justify-center md:order-last">
             <Avatar className="h-60 w-60 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96 border-4 border-primary/50 shadow-2xl transition-transform hover:scale-105">
-              <AvatarImage src="https://placehold.co/400x400.png" alt={name} data-ai-hint="professional portrait" />
+              <AvatarImage src="/images/myphoto.jpg" alt={name} data-ai-hint="professional portrait" />
               <AvatarFallback>{name.substring(0, 2).toUpperCase()}</AvatarFallback>
             </Avatar>
           </div>
