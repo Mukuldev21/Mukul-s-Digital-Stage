@@ -37,7 +37,7 @@ const experiences: Experience[] = [
 export function ExperienceTimeline() {
   return (
     <section id="experience" className="w-full pt-8 pb-8 md:pb-12">
-      <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-shadow hover:shadow-xl">
+      <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-transform duration-300 ease-in-out hover:-translate-y-1">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-primary flex items-center">
             <Briefcase className="mr-3 h-7 w-7" />
@@ -58,7 +58,7 @@ export function ExperienceTimeline() {
                   <img 
                     src={exp.logoUrl} 
                     alt={`${exp.company} logo`} 
-                    className="w-12 h-12 rounded-full mr-4 mb-2 sm:mb-0 object-contain border bg-background/30 p-1" // Adjusted background for visibility on glass
+                    className="w-12 h-12 rounded-full mr-4 mb-2 sm:mb-0 object-contain border bg-background/30 p-1" 
                     data-ai-hint={exp.dataAiHint || "company logo"}
                   />
                 )}

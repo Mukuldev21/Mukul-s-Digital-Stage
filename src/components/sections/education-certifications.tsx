@@ -44,7 +44,7 @@ export function EducationCertifications() {
     <section id="education-certifications" className="w-full pt-8 pb-8 md:pb-12">
       <div className="grid gap-8 md:grid-cols-2">
         {/* Education Card */}
-        <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-shadow hover:shadow-xl">
+        <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-transform duration-300 ease-in-out hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-primary flex items-center">
               <GraduationCap className="mr-3 h-7 w-7" />
@@ -63,7 +63,7 @@ export function EducationCertifications() {
         </Card>
 
         {/* Certifications & Achievements Card */}
-        <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-shadow hover:shadow-xl">
+        <Card className="rounded-xl shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-lg transition-transform duration-300 ease-in-out hover:-translate-y-1">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold text-primary flex items-center">
               <Award className="mr-3 h-7 w-7" />
