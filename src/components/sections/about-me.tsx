@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -22,7 +23,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, value, label }) => (
 );
 
 export function AboutMe() {
-  const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; // Ensure this PDF exists in your public folder
+  const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; 
 
   return (
     <section id="about-me" className="w-full py-16 md:py-24 bg-muted/30 dark:bg-muted/10">
@@ -35,8 +36,9 @@ export function AboutMe() {
           <p className="mt-2 text-lg text-muted-foreground">My Introduction</p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-10">
-          <div className="space-y-6 text-left">
+        <div className="grid md:grid-cols-5 gap-12 items-start">
+          {/* Left Column: Text Content & CV Button */}
+          <div className="md:col-span-3 space-y-6 text-left">
             <p className="text-lg leading-relaxed text-foreground/90">
               I'm an experienced Software Development Engineer in Test (SDET) with 3 years of hands-on experience in building scalable test automation frameworks, integrating tests into CI/CD pipelines, and enhancing software reliability through DevOps practices.
             </p>
@@ -46,21 +48,21 @@ export function AboutMe() {
             <p className="text-lg leading-relaxed text-foreground/90">
               Currently working at Capgemini in Pune, Maharashtra, I focus on scaling test automation frameworks and optimizing testing strategies for high-quality software delivery.
             </p>
+            <div className="pt-4">
+              <Button size="lg" asChild className="transition-transform hover:scale-105 shadow-md">
+                <Link href={cvPath} target="_blank" download="Mukul_Dev_Mahato_CV.pdf">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download CV
+                </Link>
+              </Button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+          {/* Right Column: Info Cards */}
+          <div className="md:col-span-2 grid grid-cols-1 gap-4 pt-4 md:pt-0">
             <InfoCard icon={Briefcase} value="03+" label="Years Experience" />
             <InfoCard icon={FolderKanban} value="05+" label="Projects Completed" />
             <InfoCard icon={Building} value="01" label="Company Worked" />
-          </div>
-
-          <div className="text-center pt-4">
-            <Button size="lg" asChild className="transition-transform hover:scale-105 shadow-md">
-              <Link href={cvPath} target="_blank" download="Mukul_Dev_Mahato_CV.pdf">
-                <Download className="mr-2 h-5 w-5" />
-                Download CV
-              </Link>
-            </Button>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, TestTubeDiagonal, Network, Smartphone, GitMerge, Cloud, Code, Briefcase } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -57,20 +58,20 @@ export function SkillsShowcase() {
           </CardTitle>
           <CardDescription>A comprehensive list of my technical proficiencies.</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-8"> {/* Increased space between categories */}
           {skillCategories.map((category) => (
             <div key={category.name}>
-              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center">
-                <category.icon className="mr-2 h-5 w-5 text-accent" />
+              <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center"> {/* Increased font size and margin */}
+                <category.icon className="mr-3 h-6 w-6 text-accent" /> {/* Slightly larger icon */}
                 {category.name}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <div
                     key={skill}
-                    className="px-4 py-2 rounded-md shadow-sm border border-border bg-background/70 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 cursor-default transform hover:scale-[1.03]"
+                    className="px-4 py-2.5 rounded-lg shadow-md border border-border bg-background/80 hover:bg-accent hover:text-accent-foreground transition-all duration-200 cursor-default transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" // Enhanced styling
                   >
-                    <span className="text-sm font-medium text-foreground group-hover:text-accent-foreground">
+                    <span className="text-sm font-medium text-foreground group-hover:text-accent-foreground"> {/* Ensure text color changes on hover via group */}
                       {skill}
                     </span>
                   </div>
