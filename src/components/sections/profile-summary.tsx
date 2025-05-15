@@ -13,7 +13,7 @@ export function ProfileSummary() {
   const summary = "Experienced SDET with 3 years in building scalable test automation frameworks, CI/CD integration, and enhancing software reliability via DevOps. Proficient in API testing, cloud tech, and Agile.";
   const linkedinUrl = "https://www.linkedin.com/in/mukul-dev-a02108198/"; 
   const githubUrl = "https://github.com/Mukuldev21";
-  const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; // Ensure this PDF exists in your public folder
+  const cvPath = "/MukulDevMahato_SDET.pdf"; // Ensure this PDF exists in your public folder
 
   return (
     <section id="profile" className="w-full py-20 md:py-28 lg:py-36 bg-gradient-to-br from-background to-muted/30 dark:to-muted/10">
@@ -44,7 +44,7 @@ export function ProfileSummary() {
                   </a>
                </Button>
                <Button variant="outline" size="lg" asChild className="transition-transform hover:scale-105 shadow-md">
-                  <Link href={cvPath} target="_blank" download="Mukul_Dev_Mahato_CV.pdf">
+                  <Link href={cvPath} target="_blank" download="MukulDevMahato_SDET.pdf">
                       <FileText className="mr-2 h-5 w-5" /> Download CV
                   </Link>
                </Button>
