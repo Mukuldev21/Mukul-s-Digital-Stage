@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Lightbulb, Code2, FolderKanban, ShieldAlert } from "lucide-react";
+import { Github, ExternalLink, Lightbulb, Code2, TestTubeDiagonal, Bot } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
@@ -11,7 +11,7 @@ interface Project {
   description: string;
   imageUrl?: string;
   dataAiHint?: string;
-  codeLink?: string;
+  codeLink: string;
   liveLink?: string;
   technologies: string[];
   icon: LucideIcon;
@@ -19,31 +19,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Personal Portfolio Website",
-    description: "This dynamic portfolio, showcasing my skills and experience. Built with Next.js, Tailwind CSS, and ShadCN UI for a modern, responsive design.",
+    name: "CURA Healthcare Services Solutions",
+    description: "Built a Selenium-based framework with parallel execution, reducing test runtime by 40%. Enabled headless mode and cross-browser testing (Chrome, Firefox, Edge) for 100% compatibility. Integrated Extent Reports with detailed logs, cutting debugging time by 50%. Used JSON-based data management, improving scalability and maintainability by 60%.",
     imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "website design",
-    codeLink: "https://github.com/mukuldm/portfolio-nextjs", // Example, replace with actual
-    liveLink: "https://mukulmahato.dev", // Example, replace with actual
-    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript", "ShadCN UI"],
-    icon: Code2,
+    dataAiHint: "healthcare automation",
+    codeLink: "https://github.com/mukuldm/cura-healthcare-selenium", // Replace with actual link
+    technologies: ["Java 21", "Selenium WebDriver", "TestNG", "Maven", "JSON", "Extent Reports", "Git"],
+    icon: TestTubeDiagonal,
   },
   {
-    name: "E-commerce Test Automation Framework",
-    description: "A comprehensive BDD framework using Cucumber and Selenium for an e-commerce platform, enhancing test coverage and reducing regression cycles.",
+    name: "SauceDemo Playwright TS Solution",
+    description: "Developed a scalable end-to-end test automation framework using Playwright with TypeScript, achieving a 70% reduction in test execution time through parallel testing. Implemented the Page Object Model (POM) design pattern, enhancing code maintainability and reducing duplication by 60%. Integrated HTML reporting and trace viewer for comprehensive test result analysis, decreasing debugging time by 50%. Utilized JSON-based fixtures for dynamic test data management, improving test scalability and reusability. Configured the framework for cross-browser testing (Chrome, Edge, Webkit), ensuring 100% compatibility across major browsers.",
     imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "automation testing",
-    codeLink: "https://github.com/mukuldm/ecommerce-bdd-framework", // Example
-    technologies: ["Java", "Selenium", "Cucumber", "TestNG", "Maven"],
-    icon: FolderKanban,
-  },
-  {
-    name: "API Performance Test Suite",
-    description: "Developed a performance test suite using JMeter and Groovy scripting for critical banking APIs, identifying bottlenecks and ensuring SLA compliance.",
-    imageUrl: "https://placehold.co/600x400.png",
-    dataAiHint: "api performance",
-    technologies: ["JMeter", "Groovy", "InfluxDB", "Grafana", "Jenkins"],
-    icon: ShieldAlert,
+    dataAiHint: "e-commerce testing",
+    codeLink: "https://github.com/mukuldm/saucedemo-playwright-ts", // Replace with actual link
+    technologies: ["Playwright", "TypeScript", "HTML Reporter", "JSON", "Git"],
+    icon: Bot,
   },
 ];
 
@@ -56,14 +47,14 @@ export function ProjectPortfolio() {
           Project Portfolio
         </h2>
         <p className="mt-3 text-lg text-muted-foreground sm:text-xl">
-          A selection of projects I've worked on.
+          A selection of my key projects.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2"> {/* Adjusted to lg:grid-cols-2 for two projects */}
         {projects.map((project, index) => (
           <Card 
             key={index} 
-            className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform"
+            className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform bg-card/90 dark:bg-card/80 backdrop-blur-md"
           >
             {project.imageUrl && (
               <div className="relative h-48 w-full">
@@ -86,7 +77,7 @@ export function ProjectPortfolio() {
               <CardDescription className="text-foreground/80">{project.description}</CardDescription>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="text-xs">
+                  <Badge key={tech} variant="secondary" className="text-xs bg-primary/10 text-primary border-primary/30">
                     {tech}
                   </Badge>
                 ))}

@@ -1,38 +1,34 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, CalendarDays, CheckCircle } from "lucide-react";
+import { Briefcase, CalendarDays, CheckCircle, Building } from "lucide-react";
 
 interface Experience {
   role: string;
   company: string;
+  location: string;
   duration: string;
   achievements: string[];
   logoUrl?: string;
+  dataAiHint?: string;
 }
 
 const experiences: Experience[] = [
   {
-    role: "Senior Test Automation Engineer",
+    role: "Senior Software Engineer",
     company: "Capgemini",
-    duration: "July 2021 - Present",
-    logoUrl: "https://placehold.co/100x100.png", // Replace with actual Capgemini logo URL if allowed
+    location: "Pune, Maharashtra",
+    duration: "2022 – Present",
+    logoUrl: "https://placehold.co/100x100.png", 
+    dataAiHint: "company logo",
     achievements: [
-      "Led the design and implementation of scalable test automation frameworks using Selenium, Cypress, and Playwright, resulting in a 50% reduction in manual testing effort.",
-      "Developed and maintained CI/CD pipelines for automated testing, integrating with Jenkins and Azure DevOps, ensuring early bug detection and faster feedback loops.",
-      "Pioneered API automation strategies using RestAssured and Postman, achieving 95% test coverage for critical microservices.",
-      "Collaborated closely with development and product teams in an Agile environment to define testing requirements and ensure quality throughout the SDLC.",
-      "Mentored and coached junior QA engineers on automation best practices, tools, and techniques."
-    ],
-  },
-  {
-    role: "Test Automation Engineer",
-    company: "Cognizant",
-    duration: "June 2018 - June 2021",
-    logoUrl: "https://placehold.co/100x100.png", // Replace with actual Cognizant logo URL if allowed
-    achievements: [
-      "Developed and executed automated test scripts for web and mobile applications, improving regression testing efficiency by 30%.",
-      "Participated in all phases of the STLC, including test planning, test case design, execution, and defect reporting.",
-      "Gained experience in performance testing using JMeter and defect tracking using JIRA.",
-      "Contributed to the continuous improvement of QA processes and methodologies."
+      "Designed scalable test automation frameworks achieving 80%+ test coverage.",
+      "Automated 95% of regression testing, reducing manual effort and boosting efficiency.",
+      "Built Java-based automation for webApp and API.",
+      "Integrated tests into CI/CD pipelines (Jenkins, Azure DevOps), cutting deployment validation time by 30%.",
+      "Developed REST API automation for 500+ backend services, ensuring stability and security.",
+      "Improved flaky test reliability by 40% through enhanced automation practices.",
+      "Applied system design principles to create secure, scalable, and maintainable frameworks.",
+      "Executed Agile-aligned test strategies, managing defects and execution via JIRA and Azure DevOps, reducing post-release defects by 30%.",
+      "Contributed to sprint planning, test execution, and process refinement in Agile teams."
     ],
   },
 ];
@@ -40,7 +36,7 @@ const experiences: Experience[] = [
 export function ExperienceTimeline() {
   return (
     <section id="experience" className="w-full">
-      <Card className="shadow-lg transition-shadow hover:shadow-xl">
+      <Card className="shadow-lg transition-shadow hover:shadow-xl bg-card/90 dark:bg-card/80 backdrop-blur-md">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-primary flex items-center">
             <Briefcase className="mr-3 h-7 w-7" />
@@ -51,7 +47,7 @@ export function ExperienceTimeline() {
           {experiences.map((exp, index) => (
             <div key={index} className="relative pl-8 sm:pl-10 group">
               <span className="absolute left-0 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground group-hover:scale-110 transition-transform">
-                <Briefcase className="h-3 w-3" />
+                <Building className="h-3 w-3" />
               </span>
               <div className="absolute left-[11px] top-8 bottom-0 w-0.5 bg-border group-last:hidden"></div>
               
@@ -61,12 +57,12 @@ export function ExperienceTimeline() {
                     src={exp.logoUrl} 
                     alt={`${exp.company} logo`} 
                     className="w-12 h-12 rounded-full mr-4 mb-2 sm:mb-0 object-contain border bg-background p-1"
-                    data-ai-hint="company logo"
+                    data-ai-hint={exp.dataAiHint || "company logo"}
                   />
                 )}
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
-                  <p className="text-md text-muted-foreground">{exp.company}</p>
+                  <p className="text-md text-muted-foreground">{exp.company} - {exp.location}</p>
                 </div>
               </div>
               <div className="flex items-center text-sm text-muted-foreground mb-3">

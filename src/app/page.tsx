@@ -4,6 +4,8 @@ import { ProfileSummary } from "@/components/sections/profile-summary";
 import { SkillsShowcase } from "@/components/sections/skills-showcase";
 import { ExperienceTimeline } from "@/components/sections/experience-timeline";
 import { ProjectPortfolio } from "@/components/sections/project-portfolio";
+import { EducationCertifications } from "@/components/sections/education-certifications";
+import { PassionGoal } from "@/components/sections/passion-goal";
 import { Separator } from "@/components/ui/separator";
 
 export default function HomePage() {
@@ -20,6 +22,10 @@ export default function HomePage() {
             <ExperienceTimeline />
             <Separator className="my-8" />
             <ProjectPortfolio />
+            <Separator className="my-8" />
+            <EducationCertifications />
+            <Separator className="my-8" />
+            <PassionGoal />
           </div>
         </div>
       </main>

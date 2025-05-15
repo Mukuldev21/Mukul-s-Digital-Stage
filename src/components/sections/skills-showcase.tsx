@@ -1,48 +1,83 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Cog, Network, GitMerge, CloudIcon as Cloud, Users, Repeat, Zap, TestTubeDiagonal, ShieldCheck } from "lucide-react";
+import { Cog, Network, GitMerge, Cloud, Users, Repeat, Zap, TestTubeDiagonal, ShieldCheck, Smartphone, Code, Terminal, Package, Cpu, Server, Briefcase } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-interface Skill {
+interface SkillCategory {
   name: string;
   icon: LucideIcon;
+  skills: string[];
 }
 
-const skills: Skill[] = [
-  { name: "Test Automation", icon: Cog },
-  { name: "API Testing", icon: Network },
-  { name: "CI/CD", icon: GitMerge },
-  { name: "Cloud (AWS, Azure)", icon: Cloud },
-  { name: "Agile Methodologies", icon: Users },
-  { name: "DevOps Practices", icon: Repeat },
-  { name: "Performance Testing", icon: Zap },
-  { name: "Selenium & Cypress", icon: TestTubeDiagonal },
-  { name: "Security Testing Basics", icon: ShieldCheck },
+const skillCategories: SkillCategory[] = [
+  { 
+    name: "Test Automation", 
+    icon: TestTubeDiagonal, 
+    skills: ["Selenium", "Playwright", "Cucumber", "TestNG"] 
+  },
+  { 
+    name: "API Testing", 
+    icon: Network, 
+    skills: ["REST Assured", "Postman", "REST API", "API Mocking"] 
+  },
+  { 
+    name: "Mobile Testing", 
+    icon: Smartphone, 
+    skills: ["Appium"] 
+  },
+  { 
+    name: "CI/CD & DevOps", 
+    icon: GitMerge, 
+    skills: ["Jenkins", "Docker", "Git", "Azure DevOps"] 
+  },
+  { 
+    name: "Cloud & Cross-Browser Testing", 
+    icon: Cloud, 
+    skills: ["Microsoft Azure", "LambdaTest", "SauceLabs"] 
+  },
+  { 
+    name: "Programming Languages", 
+    icon: Code, 
+    skills: ["Java", "Python", "JavaScript", "SQL"] 
+  },
+  { 
+    name: "Agile & Project Management", 
+    icon: Briefcase, 
+    skills: ["Scrum", "Kanban", "JIRA"] 
+  },
 ];
 
 export function SkillsShowcase() {
   return (
     <section id="skills" className="w-full">
-      <Card className="shadow-lg transition-shadow hover:shadow-xl">
+      <Card className="shadow-lg transition-shadow hover:shadow-xl  bg-card/90 dark:bg-card/80 backdrop-blur-md">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-primary flex items-center">
-            <Cog className="mr-3 h-7 w-7" />
+            <Zap className="mr-3 h-7 w-7" />
             Skills & Technologies
           </CardTitle>
+          <CardDescription>A comprehensive list of my technical proficiencies.</CardDescription>
         </CardHeader>
-        <CardContent>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <Badge
-                key={skill.name}
-                variant="secondary"
-                className="px-4 py-2 text-sm rounded-full shadow-sm border-primary/50 hover:bg-primary/10 transition-all duration-200 cursor-default"
-              >
-                <skill.icon className="mr-2 h-4 w-4 text-primary" />
-                {skill.name}
-              </Badge>
-            ))}
-          </div>
+        <CardContent className="space-y-6">
+          {skillCategories.map((category) => (
+            <div key={category.name}>
+              <h3 className="text-lg font-medium text-foreground mb-3 flex items-center">
+                <category.icon className="mr-2 h-5 w-5 text-accent" />
+                {category.name}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <Badge
+                    key={skill}
+                    variant="secondary"
+                    className="px-3 py-1 text-sm rounded-md shadow-sm border-primary/30 bg-primary/5 hover:bg-primary/10 transition-all duration-200 cursor-default"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          ))}
         </CardContent>
       </Card>
     </section>

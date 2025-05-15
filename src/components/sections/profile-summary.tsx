@@ -1,32 +1,45 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Mail, MapPin, UserCircle, Briefcase, ExternalLink } from "lucide-react";
+import { Mail, MapPin, UserCircle, Briefcase, ExternalLink, Phone, Linkedin, Github, FileText, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 export function ProfileSummary() {
   const name = "Mukul Dev Mahato";
   const email = "mukul.com12@gmail.com";
+  const phone = "+91 7033380645";
   const location = "Pune, Maharashtra, India";
-  const professionalTitle = "Senior Test Automation Engineer";
-  const summary = "Experienced Test Automation Engineer with a passion for quality assurance, CI/CD, and leveraging cloud technologies to build robust testing solutions. Proven ability in API testing, Agile methodologies, and DevOps practices.";
+  const professionalTitle = "Software Development Engineer in Test (SDET)";
+  const summary = "Software Development Engineer in Test (SDET) with 3 years of experience in building scalable test automation frameworks, integrating tests into CI/CD pipelines, and enhancing software reliability through DevOps practices. Skilled in test automation, API testing, cloud technologies, and Agile methodologies.";
+  const keySkills = ["Test Automation", "CI/CD", "API Testing", "Cloud", "Agile", "DevOps"];
+  const linkedinUrl = "https://www.linkedin.com/in/mukulmahato/"; // Replace with your actual LinkedIn URL
+  const githubUrl = "https://github.com/mukuldm"; // Replace with your actual GitHub URL
+
 
   return (
     <section id="profile" className="w-full">
-      <Card className="overflow-hidden shadow-xl transition-shadow hover:shadow-2xl bg-card/80 dark:bg-card/75 backdrop-blur-lg border border-border/40 dark:border-border/30 rounded-2xl">
+      <Card className="overflow-hidden shadow-xl transition-shadow hover:shadow-2xl bg-card/60 dark:bg-card/50 backdrop-blur-xl border border-border/40 dark:border-border/30 rounded-2xl">
         <CardHeader className="p-6 sm:p-8">
           <div className="flex flex-col items-center gap-6 sm:flex-row">
-            <Avatar className="h-32 w-32 sm:h-40 sm:w-40 border-4 border-primary shadow-lg">
-              <AvatarImage src={`https://placehold.co/200x200.png`} alt={name} data-ai-hint="professional portrait" />
+            <Avatar className="h-36 w-36 sm:h-48 sm:w-48 border-4 border-primary shadow-lg">
+              <AvatarImage src={`https://placehold.co/250x250.png`} alt={name} data-ai-hint="professional portrait" />
               <AvatarFallback>{name.substring(0, 2).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div className="text-center sm:text-left">
-              <CardTitle className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
+              <CardTitle className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-primary">
                 {name}
               </CardTitle>
               <p className="mt-1 text-lg text-muted-foreground sm:text-xl">
                 {professionalTitle}
               </p>
+              <div className="mt-3 flex flex-wrap justify-center sm:justify-start gap-2">
+                {keySkills.map(skill => (
+                  <Badge key={skill} variant="secondary" className="text-xs sm:text-sm bg-primary/10 text-primary border-primary/30">
+                     {skill}
+                  </Badge>
+                ))}
+              </div>
             </div>
           </div>
         </CardHeader>
@@ -36,13 +49,15 @@ export function ProfileSummary() {
           </p>
           <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-2 sm:gap-6">
             <div className="flex items-center space-x-3">
-              <UserCircle className="h-5 w-5 text-primary" />
-              <span>{name}</span>
-            </div>
-            <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-primary" />
               <a href={`mailto:${email}`} className="hover:underline text-primary">
                 {email}
+              </a>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="h-5 w-5 text-primary" />
+              <a href={`tel:${phone}`} className="hover:underline text-primary">
+                {phone}
               </a>
             </div>
             <div className="flex items-center space-x-3">
@@ -56,11 +71,26 @@ export function ProfileSummary() {
           </div>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
              <Button asChild className="transition-transform hover:scale-105">
-                <Link href="#projects">View Projects <ExternalLink className="ml-2 h-4 w-4" /></Link>
+                <Link href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+                </Link>
              </Button>
              <Button variant="outline" asChild className="transition-transform hover:scale-105">
-                <Link href="https://www.linkedin.com/in/mukulmahato/" target="_blank" rel="noopener noreferrer">LinkedIn Profile <ExternalLink className="ml-2 h-4 w-4" /></Link>
+                <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" /> GitHub
+                </Link>
              </Button>
+             <Button variant="outline" asChild className="transition-transform hover:scale-105">
+                <Link href="#projects">
+                    <Zap className="mr-2 h-4 w-4" /> View Projects
+                </Link>
+             </Button>
+             {/* Optional: Add a Download CV button if you have a CV file */}
+             {/* <Button variant="outline" asChild className="transition-transform hover:scale-105">
+                <Link href="/path-to-your-cv.pdf" target="_blank" download>
+                    <FileText className="mr-2 h-4 w-4" /> Download CV
+                </Link>
+             </Button> */}
           </div>
         </CardContent>
       </Card>
