@@ -1,3 +1,4 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Mail, MapPin, Linkedin, Github, FileText, Briefcase, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,8 +11,8 @@ export function ProfileSummary() {
   const location = "Pune, Maharashtra, India";
   const professionalTitle = "Software Development Engineer in Test (SDET)";
   const summary = "Experienced SDET with 3 years in building scalable test automation frameworks, CI/CD integration, and enhancing software reliability via DevOps. Proficient in API testing, cloud tech, and Agile.";
-  const linkedinUrl = "https://www.linkedin.com/in/mukulmahato/"; 
-  const githubUrl = "https://github.com/mukuldm";
+  const linkedinUrl = "https://www.linkedin.com/in/mukul-dev-a02108198/"; 
+  const githubUrl = "https://github.com/Mukuldev21";
   const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; // Ensure this PDF exists in your public folder
 
   return (
