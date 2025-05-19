@@ -5,7 +5,6 @@ import { CodeXml, User, Zap, Briefcase, FolderKanban, GraduationCap, Info, HomeI
 
 const navItems = [
   { href: "/", label: "Home", icon: HomeIcon, sectionId: "profile" }, // Assuming home links to profile summary
-  { href: "/#profile", label: "Profile", icon: User, sectionId: "profile" },
   { href: "/#about-me", label: "About", icon: Info, sectionId: "about-me" },
   { href: "/#skills", label: "Skills", icon: Zap, sectionId: "skills" },
   { href: "/#experience", label: "Experience", icon: Briefcase, sectionId: "experience" },
