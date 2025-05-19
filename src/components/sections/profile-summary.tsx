@@ -64,16 +64,16 @@ export function ProfileSummary() {
               </div>
             </div>
              <div className="mt-6 flex justify-center md:justify-start space-x-4">
-                <Link href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
-                        <Linkedin className="h-6 w-6" />
+                    <Button variant="outline" size="sm" asChild className="transition-transform hover:scale-105">
+                       <Link href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                          <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+                      </Link>
                     </Button>
-                </Link>
-                <Link href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                     <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
-                        <Github className="h-6 w-6" />
+                    <Button variant="outline" size="sm" asChild className="transition-transform hover:scale-105">
+                       <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="mr-2 h-4 w-4" /> Github
+                      </Link>
                     </Button>
-                </Link>
              </div>
           </div>
         </div>
