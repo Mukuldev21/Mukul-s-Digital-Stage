@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     name: "CURA Healthcare Services Solutions",
     description: "Selenium framework with parallel execution reducing test runtime by 40%. Features cross-browser support, Extent Reports, and JSON data management for scalability.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/images/cura.png",
     dataAiHint: "healthcare automation",
     codeLink: "https://github.com/Mukuldev21/CURA-Healthcare-Services-Solutions",
     technologies: ["Java 21", "Selenium WebDriver", "TestNG", "Maven", "JSON", "Extent Reports", "Git"],
@@ -31,7 +31,7 @@ const projects: Project[] = [
   {
     name: "SauceDemo Playwright TS Solution",
     description: "Playwright/TypeScript E2E framework cutting test time by 70% with parallel tests. Implements POM for 60% better maintainability, HTML reports, and JSON fixtures.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "/images/saucedemoproject.png",
     dataAiHint: "ecommerce testing",
     codeLink: "https://github.com/Mukuldev21/Saucedemo-Playwright-TS-Solution",
     technologies: ["Playwright", "TypeScript", "HTML Reporter", "JSON", "Git"],
