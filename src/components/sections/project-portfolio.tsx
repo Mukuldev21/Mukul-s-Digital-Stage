@@ -19,6 +19,16 @@ interface Project {
 }
 
 const projects: Project[] = [
+
+  {
+    name: "OpenMRS02",
+    description: "Cucumber-Selenium framework for OpenMRS with Page Object Model and Extent Reports. Supports BDD testing, cross-browser execution, and modular test design for easy scalability",
+    imageUrl: "/images/openmrs02.png",
+    dataAiHint: "healthcare automation",
+    codeLink: "https://github.com/Mukuldev21/OpenMRS02",
+    technologies: ["Java 23", "Selenium WebDriver","Cucumber", "TestNG","POM", "Maven", "JSON", "Extent Reports", "Git"],
+    icon: TestTubeDiagonal,
+  },
   {
     name: "CURA Healthcare Services Solutions",
     description: "Selenium framework with parallel execution reducing test runtime by 40%. Features cross-browser support, Extent Reports, and JSON data management for scalability.",
