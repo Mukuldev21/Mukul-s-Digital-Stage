@@ -24,7 +24,8 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, value, label }) => (
 );
 
 export function AboutMe() {
-  const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; 
+  //const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; 
+  const cvPath = "resumes/Mukul Dev Mahato_SDET.pdf"; 
 
   return (
     <section id="about-me" className="w-full py-16 md:py-24">
