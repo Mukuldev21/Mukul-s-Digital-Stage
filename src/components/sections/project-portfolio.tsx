@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal } from "lucide-react";
+import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal, DrillIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
@@ -19,6 +19,17 @@ interface Project {
 }
 
 const projects: Project[] = [
+
+
+  {
+    name: "BOSCH Power Tools – Playwright E2E Automation Suite",
+    description: "Built a Playwright E2E suite for Bosch Tools US with POM, cross-browser testing, CI integration, and automation of key user flows:  homepage, search, filtering, PDP, and dealer locator, delivering fast, scalable, and traceable validation.",
+    imageUrl: "/images/bosch.png",
+    dataAiHint: "ecommerce testing",
+    codeLink: "https://github.com/Mukuldev21/BOSCH-POWER-TOOLS-Playwright-Sol.git",
+    technologies: ["Playwright", "TypeScript", "HTML Reporter", "Allure Reports", "JSON", "Git"],
+    icon: DrillIcon,
+  },
 
   {
     name: "OpenMRS02",

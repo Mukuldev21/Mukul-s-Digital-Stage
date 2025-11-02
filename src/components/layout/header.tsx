@@ -6,9 +6,9 @@ import { CodeXml, User, Zap, Briefcase, FolderKanban, GraduationCap, Info, HomeI
 const navItems = [
   { href: "/", label: "Home", icon: HomeIcon, sectionId: "profile" }, // Assuming home links to profile summary
   { href: "/#about-me", label: "About", icon: Info, sectionId: "about-me" },
+  { href: "/#projects", label: "Projects", icon: FolderKanban, sectionId: "projects" },
   { href: "/#skills", label: "Skills", icon: Zap, sectionId: "skills" },
   { href: "/#experience", label: "Experience", icon: Briefcase, sectionId: "experience" },
-  { href: "/#projects", label: "Projects", icon: FolderKanban, sectionId: "projects" },
   { href: "/#education-certifications", label: "Education", icon: GraduationCap, sectionId: "education-certifications" },
 ];
 

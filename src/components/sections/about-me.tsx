@@ -25,7 +25,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, value, label }) => (
 
 export function AboutMe() {
   //const cvPath = "/Mukul_Dev_Mahato_CV.pdf"; 
-  const cvPath = "resumes/Mukul Dev Mahato_SDET.pdf"; 
+  const cvPath = "resumes/Mukul Dev Mahato_SDET_profile.pdf"; 
 
   return (
     <section id="about-me" className="w-full py-16 md:py-24">
@@ -43,7 +43,7 @@ export function AboutMe() {
             {/* Text Content */}
             <div className="space-y-6 text-left">
               <p className="text-lg leading-relaxed text-foreground/90">
-                I'm an experienced Software Development Engineer in Test (SDET) with 3 years of hands-on experience in building scalable test automation frameworks, integrating tests into CI/CD pipelines, and enhancing software reliability through DevOps practices.
+                I'm an experienced Software Development Engineer in Test (SDET) with 3+ years of hands-on experience in building scalable test automation frameworks, integrating tests into CI/CD pipelines, and enhancing software reliability through DevOps practices.
               </p>
               <p className="text-lg leading-relaxed text-foreground/90">
                 My passion lies in creating efficient, robust automated testing solutions that improve software quality while reducing manual effort. I'm committed to continuous learning, innovation, and excellence in test automation, DevOps, and cloud-based automation.

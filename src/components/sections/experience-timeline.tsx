@@ -23,9 +23,7 @@ const experiences: Experience[] = [
     dataAiHint: "company logo",
     achievements: [
       "Accelerated regression cycles by 40% by spearheading automation testing for Banking and Insurance clients (WTW) using Java, Selenium, TestNG, and Cucumber.",
-      "Ensured data accuracy and integrity by performing comprehensive ETL testing for MUFG, identifying and resolving over 150 data discrepancies.",
       "Reduced deployment validation time by 30% through the integration of automated test suites into CI/CD pipelines (Jenkins, Azure DevOps).",
-      "Enhanced API testing efficiency by creating and executing over 130 API test scripts in Postman and SOAP UI for BNPP, validating data accuracy and service reliability.",
       "Increased test coverage by 20% and reduced production defects by 15% by collaborating with cross-functional teams to define effective test strategies.",
       "Boosted code generation efficiency by 25% by leveraging GitHub Copilot and generative AI to develop a scalable test automation framework.",
       "Contributed to a 15% reduction in post-launch issues by executing thorough manual testing (functional, regression, UAT) across more than 20 new features.",

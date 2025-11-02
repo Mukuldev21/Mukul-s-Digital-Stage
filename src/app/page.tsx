@@ -17,11 +17,11 @@ export default function HomePage() {
         <AboutMe />
         <div className="container mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
           <Separator className="my-8" />
+          <ProjectPortfolio />
+          <Separator className="my-8" />
           <SkillsShowcase />
           <Separator className="my-8" />
           <ExperienceTimeline />
-          <Separator className="my-8" />
-          <ProjectPortfolio />
           <Separator className="my-8" />
           <EducationCertifications />
         </div>
