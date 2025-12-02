@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal, DrillIcon } from "lucide-react";
+import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal, DrillIcon, BriefcaseBusiness, TicketCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
@@ -20,6 +20,26 @@ interface Project {
 
 const projects: Project[] = [
 
+
+  {
+    name: "EventStream E2E Validator",
+    description: "A end-to-end testing framework that validates event-driven microservices by ensuring that UI actions (simulated or real) correctly trigger Kafka events.",
+    imageUrl: "/images/eventstream.png",
+    dataAiHint: "microservices testing",
+    codeLink: "https://github.com/Mukuldev21/EventStream_E2E_Validator.git",
+    technologies: ["Docker", "Playwright", "TypeScript", "Apache Kafka", "Microservices"],
+    icon: TicketCheck,
+  },
+
+  {
+    name: "EspoCRM Docker & Playwright Testing",
+    description: "Dockerized EspoCRM with Playwright E2E tests in TypeScript. Includes a ready-to-run setup for local deployment and automated UI testing.",
+    imageUrl: "/images/espocrmlogo.jpg",
+    dataAiHint: "crm portal testing",
+    codeLink: "https://github.com/Mukuldev21/espocrm-docker_playwright_E2E_testing.git",
+    technologies: ["Docker", "Playwright", "TypeScript", "Cucumber", "Allure Reports", "Git",],
+    icon: BriefcaseBusiness,
+  },
 
   {
     name: "BOSCH Power Tools – Playwright E2E Automation Suite",
