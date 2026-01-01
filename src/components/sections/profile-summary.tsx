@@ -10,7 +10,7 @@ export function ProfileSummary() {
   const phone = "+91 7033380645";
   const location = "Pune, Maharashtra, India";
   const professionalTitle = "Software Development Engineer in Test (SDET)";
-  const summary = "Experienced SDET with 3 years in building scalable test automation frameworks, CI/CD integration, and enhancing software reliability via DevOps. Proficient in API testing, cloud tech, and Agile.";
+  const summary = "Experienced SDET with 3+ years in building scalable test automation frameworks, CI/CD integration, and enhancing software reliability via DevOps. Proficient in API testing, cloud tech, and Agile.";
   const linkedinUrl = "https://www.linkedin.com/in/mukul-dev-a02108198/"; 
   const githubUrl = "https://github.com/Mukuldev21";
 

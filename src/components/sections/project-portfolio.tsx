@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal, DrillIcon, BriefcaseBusiness, TicketCheck } from "lucide-react";
+import { Github, ExternalLink, Lightbulb, Bot, TestTubeDiagonal, DrillIcon, BriefcaseBusiness, TicketCheck, ShieldHalf } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
@@ -20,6 +20,16 @@ interface Project {
 
 const projects: Project[] = [
 
+
+   {
+    name: "SwiftGuard",
+    description: "Playwright based contract testing framework that leverages LLMs (Google Gemini) to intelligently generate SWIFT message test cases.",
+    imageUrl: "/images/swiftguardhomelogo.png",
+    dataAiHint: "microservices testing",
+    codeLink: "https://github.com/Mukuldev21/SwiftGuard.git",
+    technologies: ["Playwright", "TypeScript", "LLM","Google Gemini", "Microservices","AJV"],
+    icon: ShieldHalf,
+  },
 
   {
     name: "EventStream E2E Validator",
