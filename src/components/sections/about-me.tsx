@@ -43,21 +43,18 @@ export function AboutMe() {
             {/* Text Content */}
             <div className="space-y-6 text-left">
               <p className="text-lg leading-relaxed text-foreground/90">
-                I'm an experienced Software Development Engineer in Test (SDET) with 3+ years of hands-on experience in building scalable test automation frameworks, integrating tests into CI/CD pipelines, and enhancing software reliability through DevOps practices.
+                I'm a Software Development Engineer in Test (SDET) with 4+ years of experience in test automation, quality engineering, and software delivery. I specialize in building scalable automation frameworks, leveraging AI-powered workflows, and integrating testing into CI/CD pipelines to accelerate validation and improve software quality.
               </p>
               <p className="text-lg leading-relaxed text-foreground/90">
-                My passion lies in creating efficient, robust automated testing solutions that improve software quality while reducing manual effort. I'm committed to continuous learning, innovation, and excellence in test automation, DevOps, and cloud-based automation.
-              </p>
-              <p className="text-lg leading-relaxed text-foreground/90">
-                Currently working at Capgemini in Pune, Maharashtra, I focus on scaling test automation frameworks and optimizing testing strategies for high-quality software delivery.
+                Passionate about automation and innovation, I use modern tools such as Playwright, custom AI agents, and cloud technologies to streamline testing, enhance defect detection, and drive reliable software releases. I continuously explore emerging technologies to improve quality engineering practices and deliver greater value through intelligent automation.
               </p>
             </div>
 
             {/* Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6"> {/* Kept info cards in a row for better space utilization */}
-              <InfoCard icon={Briefcase} value="03+" label="Years Experience" />
-              <InfoCard icon={FolderKanban} value="05+" label="Projects Completed" />
-              <InfoCard icon={Building} value="01" label="Company Worked" />
+              <InfoCard icon={Briefcase} value="04+" label="Years Experience" />
+              <InfoCard icon={FolderKanban} value="07+" label="Projects Completed" />
+              <InfoCard icon={Building} value="02" label="Company Worked" />
             </div>
             
             {/* CV Button */}

@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Zap, TestTubeDiagonal, Network, Smartphone, GitMerge, Cloud, Code, Briefcase, CheckCircle } from "lucide-react";
+import { Zap, TestTubeDiagonal, Network, Smartphone, GitMerge, Cloud, Code, Briefcase, CheckCircle, BrainCircuit } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface SkillCategory {
@@ -9,6 +9,7 @@ interface SkillCategory {
   skills: string[];
 }
 
+/*
 const skillCategories: SkillCategory[] = [
   { 
     name: "Test Automation", 
@@ -45,7 +46,79 @@ const skillCategories: SkillCategory[] = [
     icon: Briefcase, 
     skills: ["Scrum", "Kanban", "JIRA"] 
   },
+]; */
+const skillCategories: SkillCategory[] = [
+  {
+    name: "Quality Engineering",
+    icon: TestTubeDiagonal,
+    skills: [
+      "Functional Testing",
+      "Regression Testing",
+      "Test Strategy",
+      "Defect Analysis"
+    ]
+  },
+  {
+    name: "Test Automation",
+    icon: TestTubeDiagonal,
+    skills: [
+      "Playwright",
+      "TypeScript",
+      "Automation Framework Development",
+      "End-to-End Testing"
+    ]
+  },
+  {
+    name: "AI-Assisted Testing",
+    icon: BrainCircuit,
+    skills: [
+      "Agentic AI",
+      "Custom AI Agents",
+      "Prompt Engineering",
+      "AI-Powered Test Design"
+    ]
+  },
+  {
+  name: "Developer Productivity",
+  icon: Code,
+  skills: [
+      "VS Code",
+      "Jira MCP",
+      "Playwright MCP",
+      "Workflow Automation"
+    ]
+  },
+  {
+  name: "CI/CD & DevOps",
+  icon: GitMerge,
+  skills: [
+      "Jenkins",
+      "Docker",
+      "Git",
+      "CI/CD"
+    ]
+  },
+  {
+  name: "Cloud & Testing Platforms",
+  icon: Cloud,
+  skills: [
+      "Microsoft Azure",
+      "LambdaTest",
+      "SauceLabs"
+    ]
+},
+{
+  name: "Programming",
+  icon: Code,
+  skills: [
+    "Java",
+    "TypeScript",
+    "JavaScript",
+    "SQL"
+  ]
+}
 ];
+
 
 export function SkillsShowcase() {
   return (

@@ -13,11 +13,30 @@ interface Experience {
 }
 
 const experiences: Experience[] = [
+
+  //MRI Software Experience
+  {
+    role: "QA Engineer II",
+    company: "MRI Software",
+    location: "Pune, Maharashtra",
+    duration: "Jan 2026 – Present",
+    logoUrl: "/images/mri_software_logo.jpg",
+    dataAiHint: "company logo",
+    achievements: [
+      "Accelerated defect validation and ticket analysis by leveraging custom AI agents integrated with Jira MCP and Playwright MCP.",
+      "Improved test coverage by generating comprehensive test scenarios and test cases using project-specific AI workflows and skills.",
+      "Developed and maintained Playwright TypeScript automation suites for end-to-end validation and regression testing.",
+      "Enhanced testing efficiency through AI-assisted workflows for requirement analysis, bug investigation, and fix verification.",
+      "Collaborated with cross-functional Agile teams to deliver reliable software releases and improve overall product quality."
+    ],
+  },
+
+  // Capgemini Experience
   {
     role: "Senior Software Engineer",
     company: "Capgemini",
     location: "Pune, Maharashtra",
-    duration: "2022 – Present",
+    duration: "2022 – 2026",
     //logoUrl: "https://www.clipartmax.com/png/small/215-2153170_capgemini-capgemini-icon.png", 
     logoUrl: "/images/capgemini-logo.png",
     dataAiHint: "company logo",

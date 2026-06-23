@@ -10,7 +10,7 @@ export function ProfileSummary() {
   const phone = "+91 7033380645";
   const location = "Pune, Maharashtra, India";
   const professionalTitle = "Software Development Engineer in Test (SDET)";
-  const summary = "Experienced SDET with 3+ years in building scalable test automation frameworks, CI/CD integration, and enhancing software reliability via DevOps. Proficient in API testing, cloud tech, and Agile.";
+  const summary = "SDET with 4+ years of experience in test automation and quality engineering, combining Playwright, AI-powered workflows, and CI/CD practices to deliver reliable software faster.";
   const linkedinUrl = "https://www.linkedin.com/in/mukul-dev-a02108198/"; 
   const githubUrl = "https://github.com/Mukuldev21";
 
@@ -20,7 +20,7 @@ export function ProfileSummary() {
         <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-center">
           <div className="flex justify-center md:order-last">
             <Avatar className="h-60 w-60 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96 border-4 border-primary/50 shadow-2xl transition-transform hover:scale-105">
-              <AvatarImage src="/images/myphoto.jpg" alt={name} data-ai-hint="professional portrait" />
+              <AvatarImage src="/images/Profile_pic_mukul.png" alt={name} data-ai-hint="professional portrait" />
               <AvatarFallback>{name.substring(0, 2).toUpperCase()}</AvatarFallback>
             </Avatar>
           </div>
